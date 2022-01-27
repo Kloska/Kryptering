@@ -1,25 +1,36 @@
 package com.company;
+private char[] letters;
 
 public class Crypt {
     public static void main(String[] args) {
-        exempel1();
+        encrypt();
         exempel2();
         exempel3();
     }
 
     // Visar hur exemplet i teorigenomgången funkar i Java
-    private static void exempel1() {
-        String message = "HEJ";
-        char key = '(';
+    private static void encrypt() {
+        String message = "Hej";
+
+        letters = message.toCharArray();
+        char key = '1';
         String crypt = "";
 
-        for (int i = 0 ; i < message.length() ; i++) {
+        for(int i =0;i<letters.length;i++) {
+
+            for(int j =0;j<list.size();j++) {
+                if(letters[i]==list.get(j)) {
+                    letters[i]=shuffledList.get(j);
+                    break;
+                }
+
+       /* for (int i = 0 ; i < message.length() ; i++) {
             System.out.println(Integer.toBinaryString(message.charAt(i)));
             System.out.println("0" + Integer.toBinaryString(key));
             System.out.println(Integer.toBinaryString(message.charAt(i)^key));
             System.out.println((message.charAt(i)^key) + "\n");
             crypt += (char)(message.charAt(i)^key);
-        }
+        } */
         System.out.println(crypt);
     }
 
